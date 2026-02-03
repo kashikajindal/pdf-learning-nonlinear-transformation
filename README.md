@@ -31,18 +31,13 @@ Where:
 ---
 
 ## Step 2: Probability Distribution Modeling
-After transformation, the variable `z` is assumed to follow a Gaussian-like distribution.  
-The probability density function is given by:
+The transformed variable (*z*) is modeled using a Gaussian-shaped PDF:
+The parameters are estimated using Maximum Likelihood Estimation (MLE):
 
-\[
-\hat{p}(z) = c \cdot e^{-\lambda (z - \mu)^2}
-\]
-
-The parameters are estimated using **Maximum Likelihood Estimation (MLE)**:
-- **μ (Mu):** Mean of the transformed data  
-- **σ (Sigma):** Standard deviation of the transformed data  
-- **λ (Lambda):** \( \frac{1}{2\sigma^2} \)  
-- **c:** \( \frac{1}{\sqrt{2\pi\sigma^2}} \)
+- **Mu (Mean):** Mean of transformed values  
+- **Sigma (Standard Deviation):** Standard deviation of transformed values  
+- **Lambda =** `1 / (2σ^2)`  
+- **c =** `1 / sqrt(2πσ^2)`
 
 ---
 
