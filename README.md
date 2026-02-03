@@ -15,20 +15,18 @@ A roll-number-dependent non-linear transformation is applied to the data before 
 ---
 
 ## Step 1: Data Transformation
-To introduce non-linearity, each NO₂ value (`x`) is converted into a transformed variable (`z`) using a transformation function that depends on the university roll number.
+In this step, each value of the NO2 feature (denoted as *x*) is transformed into a new variable *z* using a roll-number-parameterized non-linear transformation function.
 
-The transformation is defined as:
+The transformation function is defined as:
 
-\[
-z = x + a_r \sin(b_r x)
-\]
+T_r(x) = x + a_r * sin(b_r * x)
 
+Thus, the transformed variable is given by:
+z = T_r(x)
 Where:
-- \( a_r = 0.05 \times (r \bmod 7) \)
-- \( b_r = 0.3 \times (r \bmod 5 + 1) \)
-- \( r \) represents the university roll number
-
-This step ensures that the transformation is unique for each student.
+- `a_r = 0.05 × (rmod 7)`
+- `b_r = 0.3 × (rmod 5 + 1)`
+- `r` is the university roll number
 
 ---
 
